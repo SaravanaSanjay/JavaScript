@@ -1,27 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE hts PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml"> 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charts</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="text/javascript" src="../jsc/jscharting.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title>Untitled Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="body" id="parent">
+        <div class="tree" >
+            <ul>
+                <li>
+                    <h3 onclick="toggleChildNodes()">CEO</h3>
+                    <div class="child">
+                    <ul >
+                        <li>
+                            <h3 class="child1" onclick="toggleChildNodes(this)">Tech Team</h3>
+                            <ul class="grandchild">
+                                <li>
+                                    <h3 class="child" onclick="toggleChildNodes(this)">DEV</h3>
+                                    <ul class="grandchild">
+                                        <li>
+                                            <h3 class="child" onclick="toggleChildNodes(this)">Senior Dev 1</h3>
+                                            <ul class="grandchild">
+                                                <li>
+                                                    <h3 >Trainee 1</h3>
+                                                </li>
+                                                    <li>
+                                                        <h3>Trainee 2</h3>
+                                                    </li>
+                                            </ul>
+                                            
+                                        </li>
+                                        <li>
+                                            <h3 class="child" onclick="toggleChildNodes(this)" >Senior Dev 2</h3>
+                                            <ul class="grandchild">
+                                                <li>
+                                                    <h3>Trainee 3</h3>
+                                                </li>
+                                                    <li>
+                                                        <h3 >Trainee 4</h3>
+                                                    </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            </li>
+                        <li>
+                            <h3 class="child" onclick="toggleChildNodes(this)">Management</h3>
+                            <ul class="grandchild">
+                                <li>
+                                    <h3 >Admin</h3>
+                                    
+                                </li>
+                                <li>
+                                    <h3 >HR</h3>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                </li>
+            </ul>
+    </div>
+</div>
+    
+    <script src="javascript.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Minimize Child Nodes</title>
     <style>
-        /* Add some CSS styling to the chart container */
-        #chart-container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
+        .minimized {
+            display: none;
         }
-        
     </style>
 </head>
 <body>
-    <div id="chart-container">
-        <canvas id="myChart"></canvas>
+    <div id="parent">
+        <div class="child" onclick="toggleChildNodes(this)">Child 1
+            <div class="grandchild">Grandchild 1</div>
+            <div class="grandchild">Grandchild 2</div>
+        </div>
+        <div class="child" onclick="toggleChildNodes(this)">Child 2
+            <div class="grandchild">Grandchild 3</div>
+            <div class="grandchild">Grandchild 4</div>
+        </div>
+        <div class="child" onclick="toggleChildNodes(this)">Child 3
+            <div class="grandchild">Grandchild 5</div>
+        </div>
     </div>
-    <script src="chart.js"></script>
+
+    <script>
+        function toggleChildNodes(element) {
+            var childNodes = element.querySelectorAll('.grandchild');
+
+            // Loop through child nodes and toggle their display
+            for (var i = 0; i < childNodes.length; i++) {
+                var childNode = childNodes[i];
+                if (childNode.style.display === "none") {
+                    childNode.style.display = "block";
+                } else {
+                    childNode.style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
-</html>
+</html> -->
+
+
