@@ -1,0 +1,68 @@
+.minimized {
+  display: none;
+}
+.body{
+  white-space: nowrap;
+  overflow-y: hidden;
+  padding: 50px;
+  min-height: 500px;
+  padding-top: 10px;
+  text-align: center;
+}
+.tree{
+display: inline-block;
+}
+.tree ul {
+  padding-top: 20px; 
+  position: relative;
+  padding-left: 0px;
+  display: flex;
+  justify-content: center;
+}
+.tree li {
+  float: left; text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+}
+.tree li::before, .tree li::after{
+  content: '';
+  position: absolute; 
+  top: 0; 
+  right: 50%;
+  border-top: 2px solid black;
+  width: 50%; 
+  height: 18px;
+}
+.tree li::after{
+  right: auto; left: 50%;
+  border-left: 2px solid black;
+}
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+.tree li:only-child{ 
+  padding-top: 0;
+}
+.tree li:first-child::before, .tree li:last-child::after{
+  border: 0 none;
+}
+.tree li:last-child::before{
+  border-right: 2px solid black;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+.tree ul ul::before{
+  content: '';
+  position: absolute; top: 0; left: 50%;
+  border-left: 2px solid black;
+  width: 0; height: 20px;
+}
+
+
